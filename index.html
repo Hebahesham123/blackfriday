@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Black Friday | Naguib Selim</title>
-  <meta name="description" content="Naguib Selim Black Friday – up to 40% off. عروض البلاك فرايدي من نجيب سليم – خصومات تصل إلى 40%." />
-  <meta property="og:title" content="Black Friday – Naguib Selim | Up to 40% Off" />
+  <meta name="description" content="Naguib Selim Black Friday – up to 40% off Home, up to 50% off fabrics, free Wavy. عروض البلاك فرايدي من نجيب سليم – خصومات تصل إلى 40%." />
+  <meta property="og:title" content="Black Friday – Naguib Selim | Up to 50% Off" />
   <meta property="og:image" content="https://naguibselim.com/cdn/shop/files/FF_up_to_40__jpg.jpg?v=1793467882&width=1200" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="icon" href="https://naguibselim.com/cdn/shop/files/ns-logo.png?v=1778749143" />
@@ -120,6 +120,20 @@
     html[lang="ar"] h1 { font-weight: 700; line-height: 1.5; }
     p { color: var(--muted); font-size: 17px; margin-bottom: 32px; }
 
+    .offers {
+      list-style: none; margin: 8px auto 20px; max-width: 380px;
+      border-top: 1px solid var(--line);
+    }
+    .offers li {
+      display: flex; align-items: center; gap: 16px;
+      padding: 14px 4px; border-bottom: 1px solid var(--line);
+      text-align: start; font-size: 16px;
+    }
+    .offers b {
+      min-width: 64px; font-size: 22px; font-weight: 900; color: #c8102e;
+      font-family: "Montserrat", sans-serif; direction: ltr; text-align: center;
+    }
+    p.small { font-size: 14px; margin-bottom: 28px; }
     .btn {
       display: block; width: 100%; max-width: 320px; margin: 0 auto;
       padding: 16px; border-radius: 8px;
@@ -158,8 +172,13 @@
     </a>
 
     <main>
-      <h1 data-t="title">Black Friday — Up to 40% Off</h1>
-      <p data-t="desc">Naguib Selim Home Collection. Limited time only.</p>
+      <h1 data-t="title">Black Friday Offers</h1>
+      <ul class="offers">
+        <li><b>40%</b><span data-t="o1">Up to 40% off Naguib Selim Home</span></li>
+        <li><b>50%</b><span data-t="o2">Up to 50% off Naguib Selim fabrics</span></li>
+        <li><b data-t="free">FREE</b><span data-t="o3">Wavy for free</span></li>
+      </ul>
+      <p class="small" data-t="desc">Limited time only.</p>
 
       <a class="btn shop js-shop" href="https://naguibselim.com/collections/naguib-selim-black-friday" data-t="shop">Shop Now</a>
 
@@ -172,9 +191,9 @@
           <defs><path id="circle" d="M100,100 m-82,0 a82,82 0 1,1 164,0 a82,82 0 1,1 -164,0" /></defs>
           <circle cx="100" cy="100" r="96" fill="none" stroke="#000" stroke-width="2" />
           <circle cx="100" cy="100" r="66" fill="none" stroke="#000" stroke-width="1" stroke-dasharray="4 6" />
-          <text><textPath href="#circle">BLACK FRIDAY • UP TO 40% OFF • SALE • </textPath></text>
+          <text><textPath href="#circle">BLACK FRIDAY • UP TO 50% OFF • SALE • </textPath></text>
         </svg>
-        <div class="num"><span>40%</span></div>
+        <div class="num"><span>50%</span></div>
       </div>
     </main>
   </div>
@@ -183,10 +202,12 @@
     (function () {
       var SHOP = 'https://naguibselim.com/collections/naguib-selim-black-friday';
       var T = {
-        en: { title: 'Black Friday — Up to 40% Off', desc: 'Naguib Selim Home Collection. Limited time only.',
+        en: { title: 'Black Friday Offers', desc: 'Limited time only.',
+              o1: 'Up to 40% off Naguib Selim Home', o2: 'Up to 50% off Naguib Selim fabrics', o3: 'Wavy for free', free: 'FREE',
               shop: 'Shop Now', wa: 'Need help? WhatsApp us', toggle: 'عربي',
               msg: 'Hi, I have a question about the Black Friday offers' },
-        ar: { title: 'بلاك فرايدي — خصومات حتى 40%', desc: 'مجموعة نجيب سليم هوم. لفترة محدودة.',
+        ar: { title: 'عروض البلاك فرايدي', desc: 'لفترة محدودة.',
+              o1: 'خصم حتى 40% على نجيب سليم هوم', o2: 'خصم حتى 50% على أقمشة نجيب سليم', o3: 'الويفي مجاناً', free: 'مجاناً',
               shop: 'تسوق الآن', wa: 'محتاج مساعدة؟ كلمنا واتساب', toggle: 'EN',
               msg: 'أهلاً، عندي استفسار عن عروض البلاك فرايدي' }
       };
